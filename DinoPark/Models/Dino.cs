@@ -1,4 +1,4 @@
-namespace DinoPark
+namespace DinoPark.Models
 {
   public class Dino
   {

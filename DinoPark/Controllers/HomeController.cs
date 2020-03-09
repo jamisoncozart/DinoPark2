@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using DinoPark.Models;
 
 namespace DinoPark.Controllers
 {
@@ -11,6 +12,12 @@ namespace DinoPark.Controllers
     public string Fight() { return "Fight two dinos..."; }
 
     [Route("/")]
-    public ActionResult HomePage() { return View(); }
+    public ActionResult HomePage() 
+    {
+      Park newPark = new Park();
+      Dino rex = new Dino("Rex", "T-Rex", 42);
+      newPark.AddDino(rex);
+      return View(newPark);
+    }
   }
 }
