@@ -16,7 +16,11 @@ namespace DinoPark.Controllers
     {
       Park newPark = new Park();
       Dino rex = new Dino("Rex", "T-Rex", 42);
+      Dino vel = new Dino("Vel", "Velociraptor", 12);
+      Dino bront = new Dino("Bront", "Brontasaurus", 76);
       newPark.AddDino(rex);
+      newPark.AddDino(vel);
+      newPark.AddDino(bront);
       return View(newPark);
     }
   }
